@@ -14,9 +14,17 @@ const { NotImplementedError } = require('../extensions/index.js');
  * ]) => 3`
  *
  */
-function countCats(/* matrix */) {
-  throw new NotImplementedError('Not implemented');
-  // remove line with error and write your code here
+function countCats(cats) {
+  const ears = '^^';
+  let result = 0;
+  for (i = 0; i < cats.length; i++) {
+    for (n = 0; n < cats[i].length; n++) {
+      if (cats[i][n] === ears) {
+        result = result + 1;
+      }
+    }
+  }
+  return result;
 }
 
 module.exports = {
